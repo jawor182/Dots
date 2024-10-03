@@ -76,5 +76,7 @@ export FZF_DEFAULT_OPTS=" \
 	--color=selected-bg:#45475a \
 	--multi"
 # Load syntax highlighting; should be last.
+export CLICOLOR=1
+export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 2>/dev/null
 # eval "$(starship init zsh)"
