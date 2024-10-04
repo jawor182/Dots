@@ -2,22 +2,25 @@
 
 
 # Launch applications in the background
+~/.config/screenlayout/screen.sh
 picom -b &
 # nm-applet &
 # blueman-applet &
 dunst &
 dwmblocks &
 nitrogen --restore &
+export XDG_SESSION_TYPE=x11
+export XDG_CURRENT_DESKTOP=gnome
+dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
+systemctl --user start xdg-desktop-portal-gtk xdg-desktop-portal
+dbus-launch ssh-agent dwm
 # pavucontrol &
 
 
 export GTK_THEME=Adwaita-dark
-# export QT_STYLE_OVERRIDE=fusion
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 export QT_QPA_PLATFORMTHEME=qt5ct
-# qsettings write org/qt/application/stylesheet fusion
 
 xrdb -load ~/.Xresources
-~/.config/screenlayout/screen.sh
-exec dwm
+exec xdg_desktop_portal & dwm 

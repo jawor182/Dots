@@ -7,6 +7,7 @@
 // custom settings, run the `zed: Open Default Settings` command
 // from the command palette
 {
+  "base_keymap": "VSCode",
   "project_panel": {
     "dock": "right"
   },
@@ -18,7 +19,7 @@
   "theme": {
     "mode": "dark",
     "light": "Catppuccin Mocha",
-    "dark": "Catppuccin Mocha"
+    "dark": "Gruvbox Dark"
   },
   "vim_mode": true,
   "telemetry": {
