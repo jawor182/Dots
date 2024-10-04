@@ -12,8 +12,10 @@ nitrogen --restore &
 
 
 export GTK_THEME=Adwaita-dark
-export QT_STYLE_OVERRIDE=fusion
-# gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+# export QT_STYLE_OVERRIDE=fusion
+gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+export QT_QPA_PLATFORMTHEME=qt5ct
 # qsettings write org/qt/application/stylesheet fusion
 
 xrdb -load ~/.Xresources

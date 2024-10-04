@@ -59,14 +59,18 @@ bindkey -M vicmd '^[[P' vi-delete-char
 bindkey -M vicmd '^e' edit-command-line
 bindkey -M visual '^[[P' vi-delete
 
+ELECTRON_FORCE_DARK_MODE=true
+export ELECTRON_FORCE_DARK_MODE
+
 # Variables
-alias v="vim"
+# alias v="vim"
 alias n="nvim"
+alias vim="nvim"
 alias b="btop"
 alias y="yazi"
 alias t="tmux"
-alias cat="bat"
 alias pacman="sudo pacman"
+alias update="sudo pacman -Syu && yay -Syu && flatpak update"
 alias dev="npm run dev"
 alias la="ls -la"
 export FZF_DEFAULT_OPTS=" \
@@ -76,7 +80,5 @@ export FZF_DEFAULT_OPTS=" \
 	--color=selected-bg:#45475a \
 	--multi"
 # Load syntax highlighting; should be last.
-export CLICOLOR=1
-export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 2>/dev/null
 # eval "$(starship init zsh)"
