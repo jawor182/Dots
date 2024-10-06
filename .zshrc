@@ -11,9 +11,10 @@ SAVEHIST=10000000
 HISTFILE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/history"
 setopt inc_append_history
 
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
+PATH="$PATH:/$HOME/.local/bin"
+PATH="$PATH:/$HOME/.local/bin/statusbar"
+TERMINAL=$TERM
+EDITOR="nvim"
 
 # Basic auto/tab complete:
 autoload -U compinit
@@ -71,10 +72,7 @@ alias pacman="sudo pacman"
 alias update="sudo pacman -Syu && yay -Syu && flatpak update"
 alias dev="npm run dev"
 alias la="ls -la"
-
-export FZF_DEFAULT_OPTS='--color=bg+:#3c3836,bg:#32302f,spinner:#fb4934,hl:#928374,fg:#ebdbb2,
-                        header:#928374,info:#8ec07c,pointer:#fb4934,marker:#fb4934,
-                        fg+:#ebdbb2,prompt:#fb4934,hl+:#fb4934'
+alias ll="ls -l"
 
 # Load syntax highlighting; should be last.
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 2>/dev/null

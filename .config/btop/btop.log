@@ -5,3 +5,7 @@
 
 2024/10/03 (21:59:27) | ===> btop++ v.1.4.0
 2024/10/03 (21:59:27) | ERROR: Exception during Config::unlock() : unordered_map::at
+
+2024/10/06 (14:24:08) | ===> btop++ v.1.4.0
+2024/10/06 (14:24:08) | ERROR: No tty detected!
+btop++ needs an interactive shell to run.
