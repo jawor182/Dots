@@ -40,7 +40,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id polybar -r & nm-applet & blueman-applet & dunst & megasync & picom -b & nitrogen --restore 
 
 #screen-layout
-exec ~/.screenlayout/layout.sh
+exec ~/.config/screenlayout/layout.sh
 
 # refresh rate exec
 

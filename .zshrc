@@ -11,8 +11,8 @@ SAVEHIST=10000000
 HISTFILE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/history"
 setopt inc_append_history
 
-PATH="$PATH:/$HOME/.local/bin"
-PATH="$PATH:/$HOME/.local/bin/statusbar"
+PATH="$PATH:$HOME/.local/bin"
+PATH="$PATH:$HOME/.local/bin/statusbar"
 TERMINAL=$TERM
 EDITOR="nvim"
 
@@ -73,6 +73,7 @@ alias update="sudo pacman -Syu && yay -Syu && flatpak update"
 alias dev="npm run dev"
 alias la="ls -la"
 alias ll="ls -l"
+alias rm="rm -rf"
 
 # Load syntax highlighting; should be last.
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 2>/dev/null

@@ -25,3 +25,4 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 
 xrdb -load ~/.Xresources
 exec dwm 
+
