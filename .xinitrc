@@ -3,11 +3,11 @@
 
 # Launch applications in the background
 ~/.config/screenlayout/screen.sh
-picom -b &
 nm-applet &
 blueman-applet &
-dwmblocks & 
 megasync -b &
+picom -b &
+slstatus &
 dunst &
 nitrogen --restore &
 export XDG_SESSION_TYPE=x11

@@ -1,8 +1,7 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 24,
-    //"output" : "DP-1",
+    //"height": 24,
     // "width": 1280, // Waybar width
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
@@ -15,14 +14,14 @@
     "format": "{name}"
     },
     "tray": {
-        "icon-size": 16,
+        "icon-size": 24,
         "spacing": 10
     },
         "clock": {
         "timezone": "Europe/Warsaw",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}",
-        "format": "{:%H:%M}"
+        "format": "{:%A %d %B %H:%M}"
     },
     "backlight": {
         "device": "intel_backlight",

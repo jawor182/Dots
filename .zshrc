@@ -8,11 +8,12 @@ setopt interactive_comments
 # History in cache directory:
 HISTSIZE=10000000
 SAVEHIST=10000000
-HISTFILE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/history"
+HISTFILE="$HOME/.zsh_history"
+setopt share_history
 setopt inc_append_history
 
-PATH="$PATH:$HOME/.local/bin"
-PATH="$PATH:$HOME/.local/bin/statusbar"
+# PATH="$PATH:$HOME/.local/bin"
+# PATH="$PATH:$HOME/.local/bin/statusbar"
 TERMINAL=$TERM
 EDITOR="nvim"
 
@@ -21,8 +22,9 @@ autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
-_comp_options+=(globdots)		# Include hidden files.
-
+_comp_options+=(globdots)# Include hidden files.
+autoload -U zsh-autosuggestions
+# zmodload zsh/autosuggestions
 # vi mode
 bindkey -v
 export KEYTIMEOUT=1
@@ -62,19 +64,24 @@ ELECTRON_FORCE_DARK_MODE=true
 export ELECTRON_FORCE_DARK_MODE
 
 # Variables
-# alias v="vim"
+alias v="vim"
 alias n="nvim"
-alias vim="nvim"
+# alias vim="nvim"
 alias b="btop"
 alias y="yazi"
 alias t="tmux"
-alias pacman="sudo pacman"
+alias h="htop"
+alias p="sudo pacman"
 alias update="sudo pacman -Syu && yay -Syu && flatpak update"
 alias dev="npm run dev"
 alias la="ls -la"
 alias ll="ls -l"
 alias rm="rm -rf"
+alias SS="sudo systemctl"
+alias smci="sudo make clean install"
+alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 # Load syntax highlighting; should be last.
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 2>/dev/null
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # eval "$(starship init zsh)"
