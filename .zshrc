@@ -81,6 +81,7 @@ alias rm="rm -rf"
 alias SS="sudo systemctl"
 alias smci="sudo make clean install"
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+alias gst="git status"
 
 # Load syntax highlighting; should be last.
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 
