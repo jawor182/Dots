@@ -11,9 +11,6 @@ SAVEHIST=10000000
 HISTFILE="$HOME/.zsh_history"
 setopt share_history
 setopt inc_append_history
-
-# PATH="$PATH:$HOME/.local/bin"
-# PATH="$PATH:$HOME/.local/bin/statusbar"
 TERMINAL=$TERM
 EDITOR="nvim"
 
@@ -84,7 +81,7 @@ alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias gst="git status"
 alias gcm="git commit -m"
 alias gps="git push"
-
+alias lshw="sudo lshw"
 # Load syntax highlighting; should be last.
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh

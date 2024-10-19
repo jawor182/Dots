@@ -1,7 +1,6 @@
 #!/bin/bash
 ~/.config/screenlayout/screen.sh
 systemctl --user start xdg-desktop-portal-gtk 
-setxkbmap -layout pl
 
 export QT_QPA_PLATFORMTHEME=qt5ct
 nm-applet &
@@ -12,5 +11,6 @@ slstatus &
 dunst &
 nitrogen --restore &
 
+setxkbmap -layout pl
 exec dwm 
 
