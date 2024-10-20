@@ -82,6 +82,7 @@ alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias gst="git status"
 alias gcm="git commit -m"
 alias gps="git push"
+alias gad="git add"
 alias lshw="sudo lshw"
 # Load syntax highlighting; should be last.
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 
