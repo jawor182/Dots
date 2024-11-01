@@ -11,7 +11,7 @@ SAVEHIST=10000000
 HISTFILE="$HOME/.zsh_history"
 setopt share_history
 setopt inc_append_history
-TERMINAL=$TERM
+TERMINAL="kitty"
 EDITOR="nvim"
 
 # Basic auto/tab complete:
@@ -70,7 +70,7 @@ alias y="yazi"
 alias t="tmux"
 alias h="htop"
 alias p="sudo pacman"
-alias update="sudo pacman -Syu && yay -Syu && flatpak update"
+alias update="sudo pacman -Syu && yay -Syu"
 alias dev="npm run dev"
 alias ls="ls --color"
 alias la="ls -la"
@@ -84,6 +84,7 @@ alias gcm="git commit -m"
 alias gps="git push"
 alias gad="git add"
 alias lshw="sudo lshw"
+alias zb="zbarimg"
 # Load syntax highlighting; should be last.
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
