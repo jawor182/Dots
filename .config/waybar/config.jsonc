@@ -2,7 +2,7 @@
     "height": 24,
     "layer": "top",
     "position": "top",
-    "spacing": 4,
+    "spacing": 6,
     "modules-left": [
         "hyprland/workspaces"
     ],
@@ -28,12 +28,14 @@
         "tooltip-format": "",
         "restart-interval": 1,
         "exec": "~/.config/scripts/date.sh",
+        "on-click-right": "kitty -e nvim ~/.config/scripts/date.sh",
         "tooltip": "false",
     },
     "custom/audio": {
         "format": "{}",
         "tooltip-format": "",
         "exec":"~/.config/scripts/volume.sh",
+        "on-click-right": "kitty -e nvim ~/.config/scripts/volume.sh",
         "restart-interval": 1,
         "tooltip": "false",
     },
