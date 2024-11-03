@@ -66,7 +66,7 @@ alias v="vim"
 alias n="nvim"
 # alias vim="nvim"
 alias b="btop"
-alias y="yazi"
+alias y="yay"
 alias t="tmux"
 alias h="htop"
 alias p="sudo pacman"
@@ -85,6 +85,7 @@ alias gps="git push"
 alias gad="git add"
 alias lshw="sudo lshw"
 alias zb="zbarimg"
+alias zshupdate="source ~/dots/.zshrc"
 # Load syntax highlighting; should be last.
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
