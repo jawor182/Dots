@@ -1,4 +1,4 @@
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-  # exec startx
-  Hyprland
+  exec startx
+  # Hyprland
 fi
