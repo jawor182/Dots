@@ -11,7 +11,7 @@ SAVEHIST=10000000
 HISTFILE="$HOME/.zsh_history"
 setopt share_history
 setopt inc_append_history
-TERMINAL="kitty"
+# TERMINAL="kitty"
 EDITOR="nvim"
 
 # Basic auto/tab complete:
@@ -86,7 +86,17 @@ alias gad="git add"
 alias lshw="sudo lshw"
 alias zb="zbarimg"
 alias zshupdate="source ~/dots/.zshrc"
-# Load syntax highlighting; should be last.
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+alias fupdate="sudo dnf update && sudo dnf upgrade && flatpak update"
+alias dnf="sudo dnf"
+alias dnfi="sudo dnf install"
+alias dnfs="sudo dnf search"
+alias dnfr="sudo dnf remove"
+# Load syntax highlighting; should be last. Dependent on the distro
+if [[ -f /etc/arch-release ]]; then
+    source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 
+    source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+else
+    source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
+    source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
 # eval "$(starship init zsh)"

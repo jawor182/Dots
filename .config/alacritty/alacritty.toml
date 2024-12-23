@@ -1,7 +1,7 @@
 [window]
 opacity = 0.75
 [font]
-normal = {family = "JetBrainsMonoNerdFont", style = "Default"}
+normal = {family = "CascadiaCodeNF", style = "Default"}
 size = 16
 
 [general]
